@@ -1,18 +1,17 @@
 const express = require("express");
 const { db } = require('./db');
-var cors = require('cors');
+const cors = require('cors');
 
 //
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT;
 app.use(cors());
-// app.use(express.json());
 
 //
 
 app.get("/", (req, res) => {
-  res.json("Test !");
+  res.json("Hello Express !");
 });
 
 app.get("/all", async (req, res) => {
