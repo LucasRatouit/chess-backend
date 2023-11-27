@@ -1,5 +1,7 @@
 const { Pool } = require("pg");
 require('dotenv').config();
+const certifBase64 = process.env.DB_CERTIF;
+const certif = Buffer.from(certifBase64, 'base64').toString('utf-8');
 
 const db = new Pool ({
   user: process.env.DB_USER,
@@ -8,7 +10,7 @@ const db = new Pool ({
   port: process.env.DB_PORT,
   database: process.env.DB_DATABASE,
   ssl: {
-    ca: process.env.DB_CERTIF,
+    ca: certif,
   },
 });
 
