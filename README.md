@@ -1,4 +1,4 @@
 # chess-backend
 
-- DataBase: _Aiven_
+- DataBase: _Render_
 - Host API: _Glitch_
