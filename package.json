@@ -2,9 +2,9 @@
   "name": "chess_back-end",
   "version": "1.0.0",
   "description": "API Chess",
-  "main": "index.ts",
+  "main": "index.js",
   "scripts": {
-    "start": "node index-js",
+    "start": "node index.js",
     "dev": "nodemon index.js",
     "test": "nodemon test.js"
   },
